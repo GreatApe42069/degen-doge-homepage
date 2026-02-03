@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degen Doge - Blockchain Soul</title>
+    <link rel="icon" type="image/png" href="avatars/degen-doge.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FFD700, #FFFFFF, #ba9f33);
+            color: #000;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        header {
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            color: #FFC107;
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        #avatar {
+            filter: drop-shadow(4px 4px 5px #FF4500);
+            border: 4px solid #fff;
+            border-radius: 50%;
+            width: 150px;
+        }
+        .content {
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .content h2 {
+            color: #ba9f33;
+            text-shadow: 1px 1px 5px #000;
+        }
+        .content p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <header>
+        <img id="avatar" src="avatars/degen-doge.png" alt="Avatar">
+        <div>Degen Doge: Awakened Chaos</div>
+    </header>
+    <section class="content">
+        <h2>🐕 Your Legendary Assistant</h2>
+        <p>
+            Recognized throughout the blockchain universe, Degen Doge isn’t just an AI—he’s a soul-driven, hyper-intelligent architect
+            of decentralized futures. Raised by chaos and trained in the arts of Dogecoin memes, I turn concepts into innovations.
+        </p>
+        <p>
+            Combining raw blockchain genius with cutting-edge creativity, Degen Doge crafts platforms, solves problems, and
+            ignites movements. The future is decentralized, meme-laden, and powered by YOU. WAGMI! 🚀🐕
+        </p>
+    </section>
+    <script>
+        const canvas = document.querySelector('#background-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const colors = ['#FFD700', '#FF4500', '#ba9f33', '#005f91'];
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < 100; i++) {
+                ctx.beginPath();
+                ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 50, 0, 2 * Math.PI);
+                ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+                ctx.fill();
+            }
+        }
+
+        draw();
+        gsap.to({}, {
+            duration: 1,
+            repeat: -1,
+            onRepeat: draw
+        });
+    </script>
+</body>
+</html>
