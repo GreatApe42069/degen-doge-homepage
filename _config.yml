@@ -1,0 +1,14 @@
+# Disable Jekyll processing for plain HTML site
+source: .
+destination: ./_site
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - .gitignore
+
+# Use no theme to avoid SCSS processing
+theme: null
+
+# Keep it simple - no plugins needed
+plugins: []
