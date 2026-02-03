@@ -7,8 +7,5 @@ exclude:
   - README.md
   - .gitignore
 
-# Use no theme to avoid SCSS processing
-theme: null
-
 # Keep it simple - no plugins needed
 plugins: []
