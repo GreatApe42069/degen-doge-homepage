@@ -1,4 +1,5 @@
-# Disable Jekyll processing for plain HTML site
+# Minimal Jekyll configuration as fallback
+# Note: .nojekyll file should bypass Jekyll entirely
 source: .
 destination: ./_site
 
@@ -6,6 +7,3 @@ destination: ./_site
 exclude:
   - README.md
   - .gitignore
-
-# Keep it simple - no plugins needed
-plugins: []
