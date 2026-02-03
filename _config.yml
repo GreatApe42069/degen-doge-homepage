@@ -1,0 +1,9 @@
+# Minimal Jekyll configuration as fallback
+# Note: .nojekyll file should bypass Jekyll entirely
+source: .
+destination: ./_site
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - .gitignore
